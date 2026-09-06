@@ -31,8 +31,28 @@
         </form>
     </div>
     <hr>
+    <div id="filters">
+
+    <button onclick="filterTasks('all')">
+        All
+    </button>
+
+    <button onclick="filterTasks('pending')">
+        Pending
+    </button>
+
+    <button onclick="filterTasks('completed')">
+        Completed
+    </button>
+
+    <button onclick="filterTasks('overdue')">
+        Overdue
+    </button>
+
+</div>
     <div id="Tasks">
         <h3>Tasks:</h3>
+        
         <ul id="tasklist"></ul>
     </div>
     <script src="script.js"></script>
