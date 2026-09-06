@@ -23,7 +23,7 @@ function renderTask(){
     for(let i=0;i<tasks.length;i++){
         const task=tasks[i];
         const li=document.createElement('li');
-        li.innerHTML=task.id+" "+'<span>'+task.title+" "+'</span>'+'<span>'+" "+task.priority+'</span>'+'<span>'+" "+task.deadline+'</span>';
+        li.innerHTML=task.id+" "+'<span>'+task.title+" "+'</span>'+'<span>'+" "+task.priority+'</span>'+'<span>'+" "+getTaskStatus(task)+'</span>';
         // const checkbox=document.createElement('input');
         // checkbox.type='checkbox';
         const checkbox=document.createElement('input');
@@ -77,3 +77,16 @@ function loadTask(){
     renderTask();
 }
 loadTask();
+function getTaskStatus(task){
+    const today=new Date();
+    const deadlineDate=new Date(task.deadline);
+    if(task.completed){
+        return 'completed';
+    }
+    else if(today>deadlineDate){
+        return 'overdue';
+    }
+    else{
+        return 'pending';
+    }
+}
