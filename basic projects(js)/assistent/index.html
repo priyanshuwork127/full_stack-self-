@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task assistant</title>
+</head>
+<body style="background-color: #b1a5a5;justify-content:center;align-items:center;display:flex;flex-direction:column;">
+    <div id="header" style="display:flex;flex-direction:column;align-items: center;justify-content:center;">
+        <h1>TaskPilot</h1>
+        <h2>Your personal task assistant</h2>
+    </div>
+    <hr>
+    <div id="info">
+        <h3>Total tasks: <span id="totalTasks">0</span></h3>
+<h3>Completed tasks: <span id="completedTasks">0</span></h3>
+<h3>Pending tasks: <span id="pendingTasks">0</span></h3>
+<h3>Progress: <span id="progress">0%</span></h3>
+    </div>
+    <hr>
+    <div id="form">
+        <form id="taskform">
+            <input type="text" id="taskInput" placeholder="Enter a new task">
+            <select id="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <input type="date" id="deadline" placeholder="Due date">
+            <button type="submit">Add task</button>
+        </form>
+    </div>
+    <hr>
+    <div id="Tasks">
+        <h3>Tasks:</h3>
+        <ul id="tasklist"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
